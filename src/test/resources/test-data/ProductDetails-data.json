@@ -1,0 +1,28 @@
+{
+
+
+  "product":
+{
+  "name": "Men Tshirt",
+  "price": "Rs. 400",
+  "quantity": "1",
+  "total": "Rs. 400"
+},
+
+
+
+  "message":
+{
+  "review": "Thank you for your review."
+
+
+},
+
+  "review":
+  {
+    "name": "iti",
+    "email": "iti@example.com",
+    "review": "Great product, highly recommended!"
+  }
+}
+

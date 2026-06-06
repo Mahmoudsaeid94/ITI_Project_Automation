@@ -1,0 +1,33 @@
+{
+  "name": "TestCheck",
+  "email": "test_Check",
+  "emailDomain": "test@example.com",
+  "titleMale": "Mr",
+  "titleFemale": "Mrs",
+  "password": "test1234",
+  "day": "1",
+  "month": "January",
+  "year": "1990",
+  "firstName": "Test",
+  "lastName": "Check",
+  "company": "Test Check Company",
+  "address1": "123 Test Street",
+  "address2": "Apt 456",
+  "country": "United States",
+  "state": "Test State",
+  "city": "Test City",
+  "zipcode": "12345",
+  "mobileNumber": "0987654321",
+  "errorMessageForExistingEmail": "Email Address already exist!",
+  "products4":
+  {
+    "name": "Men Tshirt",
+    "price": "Rs. 400",
+    "quantity": "1",
+    "total": "Rs. 400"
+  },
+  "messages":
+  {
+    "cartAdded": "Added!" }
+
+}

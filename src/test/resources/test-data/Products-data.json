@@ -1,0 +1,65 @@
+{
+
+  "products1":
+    {
+      "name": "Sleeves Printed Top - White",
+      "price": "Rs. 499",
+      "quantity": "2",
+      "total": "Rs. 998"
+    },
+  "products2":
+  {
+      "name": "Green Side Placket Detail T-Shirt",
+      "price": "Rs. 1000",
+      "quantity": "1",
+      "total": "Rs. 1000"
+    },
+  "products3":
+{
+  "name": "Men Tshirt",
+  "price": "Rs. 400",
+  "quantity": "1",
+  "total": "Rs. 400"
+},
+
+
+    "products4":
+      {
+        "name": "Half Sleeves Top Schiffli Detailing - Pink",
+        "price": "Rs. 365",
+        "quantity": "1",
+        "total": "Rs. 365"
+      },
+
+  "searchProduct":
+  {
+    "name": "Blue Top",
+    "price": "Rs. 500",
+    "quantity": "1",
+    "total": "Rs. 500"
+  },
+  "messages":
+{
+  "cartAdded": "Added!"
+
+
+},
+  "searchProductCategory":
+  {
+    "Women": "Women",
+    "Men": "Men",
+    "kids": "Kids"
+
+  },
+  "searchWithInvalidData":
+  {
+
+    "MenAR": "قميص",
+    "Space": "B l u e t o p"
+
+  }
+
+
+
+}
+

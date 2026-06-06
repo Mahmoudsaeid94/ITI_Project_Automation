@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "email": "test_test_",
+  "emailDomain": "test@example.com",
+  "titleMale": "Mr",
+  "titleFemale": "Mrs",
+  "password": "test1234",
+  "day": "1",
+  "month": "January",
+  "year": "1990",
+  "lastName": "User",
+  "company": "Test Company",
+  "address1": "123 Test Street",
+  "address2": "Apt 456",
+  "country": "United States",
+  "state": "Test State",
+  "city": "Test City",
+  "zipcode": "12345",
+  "mobileNumber": "0987654321",
+  "errorMessageForInvalidLogin": "Your email or password is incorrect!"
+}

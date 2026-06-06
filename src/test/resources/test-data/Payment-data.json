@@ -1,0 +1,50 @@
+{
+  "name": "TestCheck",
+  "email": "test_Check",
+  "emailDomain": "test@example.com",
+  "titleMale": "Mr",
+  "titleFemale": "Mrs",
+  "password": "test1234",
+  "day": "1",
+  "month": "January",
+  "year": "1990",
+  "firstName": "Test",
+  "lastName": "Check",
+  "company": "Test Check Company",
+  "address1": "123 Test Street",
+  "address2": "Apt 456",
+  "country": "United States",
+  "state": "Test State",
+  "city": "Test City",
+  "zipcode": "12345",
+  "mobileNumber": "0987654321",
+  "errorMessageForExistingEmail": "Email Address already exist!",
+  "products4":
+  {
+    "name": "Men Tshirt",
+    "price": "Rs. 400",
+    "quantity": "1",
+    "total": "Rs. 400"
+  },
+  "card":
+  {
+    "nameOnCard" : "ItiCard",
+    "cardNumber" : "1234567890123456",
+    "cvc" : "123",
+    "expiryMonth" : "12",
+    "expiryYear" : "2028",
+    "nameOnCard1" : "zxc",
+    "cardNumber1" : "zxc",
+    "cvc1" : "zxc",
+    "expiryMonth1" : "zxc",
+    "expiryYear1" : "zxc"
+
+  },
+  "messages":
+  {
+    "cartAdded": "Added!",
+
+    "paymentSuccess" : "ORDER PLACED!",
+    "paymentFailureMessage" : "Please try again."
+  }
+}

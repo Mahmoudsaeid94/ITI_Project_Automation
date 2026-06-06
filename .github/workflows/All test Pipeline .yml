@@ -1,0 +1,40 @@
+name: all Test Pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '00 00 1 * *'  // * (0-59) minute, * (0-23) hour utc, * (1-31) day, * (1-12) month, * (0-6) day of week Starting on Sunday
+  workflow_dispatch:      //run manually
+  jobs:
+    Edge_Windows_Test:
+      runs-on: windows-latest
+      permissions:
+        checks: write
+      steps:
+        - name: checkout Code
+          uses: actions/checkout@v4
+
+        - name: setup java
+          uses: actions/setup-java@v4
+          with:
+            distribution: 'zulu' # See 'Supported distributions' for available options
+            java-version: '21'
+
+        - name: setup maven
+          uses: stCarolas/setup-maven@v5
+          with:
+            maven-version: 3.9.11
+
+        - name: Run All Tests
+          continue-on-error: true
+          run: mvn -DexecutionType="LocalHeadless"  -DbrowserType="Edge" clean test
+
+        - name: Upload Test Results
+          uses: actions/upload-artifact@v4
+          with:
+            name: Edge_Windows_Report
+            path: "test-output/reports/*.html"
