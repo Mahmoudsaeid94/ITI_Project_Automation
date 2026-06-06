@@ -42,7 +42,7 @@ private String productsPageEndPoint = "/products";
     }
 
     private By hoverOnProduct(String productName) {
-        return By.xpath("//div[@class='productinfo text-center'] /p[.='" + productName + "']");
+        return By.xpath("//div[@class='overlay-content'] /p[.='" + productName + "']");
     }
 
     private By addToCartButton(String productName) {
