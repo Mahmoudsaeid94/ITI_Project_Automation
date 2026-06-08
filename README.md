@@ -1,213 +1,116 @@
 # Automation Exercise Web Automation Framework
+
 ![Java](https://img.shields.io/badge/Java-21-orange)
-
 ![Selenium](https://img.shields.io/badge/Selenium-4.x-green)
-
 ![TestNG](https://img.shields.io/badge/TestNG-7.x-red)
+
+---
 
 ## 📌 Project Overview
 
-This project is a scalable Selenium WebDriver automation framework developed for the Automation Exercise e-commerce website.
+This is a scalable UI Test Automation Framework built using Selenium WebDriver for the Automation Exercise e-commerce application.
 
-The framework automates critical business workflows including user registration, authentication, product management, shopping cart operations, checkout, and payment processing.
+The framework is designed to validate end-to-end business workflows such as user registration, login, product browsing, cart operations, and checkout flows.
 
-It follows industry-standard automation practices and is designed to be maintainable, reusable, scalable, and easy to integrate with CI/CD pipelines.
+It follows industry-standard automation practices and is built to ensure maintainability, reusability, scalability, and easy integration with CI/CD pipelines.
+
+---
 
 ## 🎯 Objectives
 
-- Automate critical business workflows.
-- Reduce manual regression testing effort.
-- Improve test coverage and execution efficiency.
-- Detect defects early in the software development lifecycle.
-- Provide detailed execution reports and test evidence.
-- Enable cross-browser test execution.
-- Support continuous integration and continuous testing.
- 
-  ## 🛠️ Tech Stack
+- Automate critical UI business workflows
+- Improve regression testing efficiency
+- Enhance test coverage across key user journeys
+- Detect UI defects early in the SDLC
+- Support continuous integration and automated test execution
 
-| Technology | Usage |
-|------------|------------|
-| Java 21 | Programming Language |
-| Selenium WebDriver | UI Automation |
-| TestNG | Test Framework |
-| Maven | Dependency Management |
-| Allure Reports | Test Reporting |
-| Log4j | Logging |
-| JSON | Test Data Management |
-| GitHub | Version Control |
-| GitHub Actions | CI/CD |
+---
 
-Framework Architecture
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+|------|------------|----------|
+| Programming Language | Java 21 | Core development language |
+| UI Automation | Selenium WebDriver | Web UI test automation |
+| Test Framework | TestNG | Test execution and management |
+| Build Tool | Maven | Dependency management and build |
+| Reporting | Allure Reports | Test execution reporting and visualization |
+| Logging | Log4j | Logging and debugging support |
+| Test Data | JSON | External test data management |
+| Version Control | Git & GitHub | Source code versioning and collaboration |
+| CI/CD | GitHub Actions | Automated test execution pipeline |
+
+---
+
+## 🏗️ Framework Architecture
+
+The framework is designed using modular and scalable architecture principles
+to ensure high maintainability, reusability, and separation of concerns across all layers.
 
 ### Design Patterns
-
 - Page Object Model (POM)
-- Factory Pattern
-- Driver Abstraction Pattern
- 
-Project Structure
+- Factory Pattern (Driver initialization)
+- Driver Abstraction Pattern (Cross-browser support)
 
-```text
-├── src
-    ├── main
-    │   ├── resources)
-    │   │   ├── waits.properties
-    │   │   ├── seleniumGrid.properties
-    │   │   ├── video.properties
-    │   │   ├── META-INF
-    │   │   │   └── services
-    │   │   │   │   └── org.testng.ITestNGListener
-    │   │   ├── allure.properties
-    │   │   ├── environment.properties
-    │   │   ├── webapp.properties
-    │   │   └── log4j2.properties
-    │   └── java
-    │   │   ├── drivers
-    │   │       ├── WebDriverProvider.java
-    │   │       ├── UITest.java
-    │   │       ├── AbstractDriver.java 
-    │   │       ├── Browser.java 
-    │   │       ├── SafariFactory.java 
-    │   │       ├── GUIDriver.java 
-    │   │       ├── FirefoxFactory.java
-    │   │       ├── ChromeFactory.java 
-    │   │       └── EdgeFactory.java 
-    │   │   ├── pages
-    │   │       ├── apiTesting.java
-    │   │       ├── testCases.java
-    │   │       ├── contactUs.java
-    │   │       ├── deleteAccount.java
-    │   │       ├── logout.java
-    │   │       ├── PaymentPage.java 
-    │   │       ├── ProductDetailsPage.java 
-    │   │       ├── cartPage.java 
-    │   │       ├── components
-    │   │       │   └── NavigationBarComponent.java 
-    │   │       ├── SignupPage.java 
-    │   │       ├── productsPage.java
-    │   │       ├── SignupLoginPage.java 
-    │   │       └── CheckOutPage.java
-    │   │   ├── utils
-    │   │       ├── OSUtils.java
-    │   │       ├── TimeManager.java
-    │   │       ├── TerminalUtils.java 
-    │   │       ├── report
-    │   │       │   ├── AllureEnvironmentManager.java 
-    │   │       │   ├── AllureConstants.java 
-    │   │       │   ├── AllureAttachmentManager.java 
-    │   │       │   ├── AllureReportGenerator.java
-    │   │       │   └── AllureBinaryManager.java 
-    │   │       ├── logs
-    │   │       │   └── LogsManager.java
-    │   │       ├── WaitManager.java 
-    │   │       ├── actions
-    │   │       │   ├── BrowserActions.java 
-    │   │       │   ├── AlertActions.java 
-    │   │       │   ├── FrameActions.java 
-    │   │       │   └── ElementActions.java 
-    │   │       └── dataReader
-    │   │       │   ├── PropertyReader.java 
-    │   │       │   └── JsonReader.java 
-    │   │   ├── validations
-    │   │       ├── Verification.java 
-    │   │       ├── Validation.java 
-    │   │       └── BaseAssertion.java 
-    │   │   ├── media
-    │   │       ├── ScreenshotsManager.java 
-    │   │       └── ScreenRecordManager.java 
-    │   │   ├── FileUtilss
-    │   │       └── FileUtils.java
-    │   │   └── listeners
-    │   │       └── TestNGListeners.java 
-    └── test
-    │   ├── resources
-    │       └── test-data
-    │       │   ├── ProductDetails-data.json
-    │       │   ├── Login-data.json
-    │       │   ├── Cart-data.json 
-    │       │   ├── CheckOut-data.json 
-    │       │   ├── Register-data.json
-    │       │   ├── Products-data.json 
-    │       │   └── Payment-data.json 
-    │   └── java
-    │       └── tests
-    │           ├── BaseTest.java
-    │           ├── ProductDetailsTest.java 
-    │           ├── CartTest.java 
-    │           ├── LoginTest.java 
-    │           ├── ProductsTest.java 
-    │           ├── CheckOutTest.java
-    │           ├── RegisterTest.java 
-    │           └── PaymentTest.java 
-├── automationExercise.eml
-├── .github
-    └── workflows
+---
+
+## 📁 Project Structure
+
+The framework follows a layered architecture:
+
+### Core Layers
+
+- **pages** → Page Object Model classes representing UI pages
+- **tests** → TestNG test classes containing test scenarios
+- **utils** → Reusable utilities (waits, OS tools, actions, readers, etc.)
+- **drivers** → WebDriver factory and browser configuration
+- **listeners** → TestNG listeners for reporting and execution hooks
+- **validations** → Assertion and verification layer
+- **dataReader** → JSON and property file readers
+- **media** → Screenshot and screen recording utilities
+
 ---
 
 ## 🚀 Framework Features
 
-### Test Automation
-
-- Functional Testing
-- Regression Testing
-- End-to-End Testing
-- Negative Testing
-- Cross-Browser Testing
-
-### Reporting & Monitoring
-
-- Allure Reports
-- Screenshots on Failure
-- Screen Recording
-- Execution Logs
-
-### Test Data Management
-
-- External JSON Test Data
-- Reusable Test Data Files
-
-### Browser Support
-
-- Chrome
-- Firefox
-- Edge
-- Safari
+- Page Object Model (POM) implementation
+- Modular and reusable framework structure
+- Cross-browser test execution support
+- Data-driven testing using JSON files
+- Centralized logging using Log4j
+- Screenshot capture on test failure
+- Screen recording for failed test cases
+- Advanced Allure reporting with attachments
+- CI/CD integration with GitHub Actions
 
 ---
-Automated Test Coverage
+
+## 🧪 Automated Test Coverage
 
 ### Account Management
-
-- User Registration
-- Existing Email Validation
-- Invalid Registration Validation
-- User Login
-- Invalid Login Validation
+- User Registration (valid/invalid scenarios)
+- Login validation (positive/negative cases)
+- Existing email validation
 
 ### Product Management
-
-- Search Products
-- Search By Category
-- Product Details Verification
-- Product Review Validation
+- Product search functionality
+- Product details verification
+- Category-based filtering
 
 ### Shopping Cart
-
-- Add Product To Cart
-- Remove Product From Cart
-- Verify Cart Content
+- Add product to cart
+- Remove product from cart
+- Cart content validation
 
 ### Checkout
-
-- Checkout Workflow Validation
+- Checkout workflow validation
 
 ### Payment
-
-- End-to-End Payment Workflow
+- End-to-end payment flow validation
 
 ---
 
-## 📊 Latest Execution Summary
+## 📊 Execution Summary (Sample)
 
 | Metric | Result |
 |----------|----------|
@@ -222,15 +125,14 @@ Automated Test Coverage
 
 ## 📈 Reporting
 
-The framework generates detailed execution reports using Allure Reports.
+The framework uses Allure Reports for detailed execution reporting.
 
-Generated artifacts include:
-
-- Test Execution Results
-- Screenshots
-- Logs
-- Execution Timeline
-- Failure Analysis
+Reports include:
+- Test execution status
+- Screenshots for failures
+- Logs and execution details
+- Timeline visualization
+- Failure analysis
 
 ---
 
@@ -240,23 +142,22 @@ GitHub Actions is used to automate test execution.
 
 ### Pipeline Flow
 
-1. Checkout Source Code
-2. Setup Java Environment
-3. Install Dependencies
-4. Execute TestNG Suites
-5. Generate Allure Results
-6. Upload Test Artifacts
+1. Checkout source code
+2. Setup Java environment
+3. Install dependencies (Maven)
+4. Execute TestNG test suite
+5. Generate Allure report
+6. Publish execution artifacts
 
 ### Benefits
-
-- Faster Feedback
-- Automated Regression Testing
-- Early Defect Detection
-- Improved Quality Assurance Process
+- Automated regression execution
+- Faster feedback cycle
+- Early defect detection
+- Improved software quality assurance
 
 ---
 
-## ▶️ Running Tests
+## ▶️ How to Run Tests
 
 ### Run All Tests
 
