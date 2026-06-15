@@ -36,5 +36,5 @@ jobs:
         - name: Upload Test Results
           uses: actions/upload-artifact@v4
           with:
-            name: Allure_Edge_actions
+            name: Allure_Edge__actions
             path: "test-output/reports/*.html"
