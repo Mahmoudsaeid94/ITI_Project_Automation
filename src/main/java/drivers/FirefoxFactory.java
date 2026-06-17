@@ -1,17 +1,14 @@
 package drivers;
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.remote.CapabilityType;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 import utils.dataReader.PropertyReader;
 import utils.logs.LogsManager;
 import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class FirefoxFactory extends AbstractDriver {
     private FirefoxOptions getOptions() {

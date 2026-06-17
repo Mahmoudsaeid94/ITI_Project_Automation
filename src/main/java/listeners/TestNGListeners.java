@@ -1,9 +1,5 @@
 package listeners;
 
-
-
-
-
 import FileUtilss.FileUtils;
 import drivers.UITest;
 import drivers.WebDriverProvider;

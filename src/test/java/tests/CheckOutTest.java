@@ -1,6 +1,7 @@
 package tests;
 
 import drivers.GUIDriver;
+import io.qameta.allure.*;
 import org.testng.annotations.*;
 import pages.SignupLoginPage;
 import pages.SignupPage;
@@ -9,15 +10,12 @@ import pages.productsPage;
 import pages.cartPage;
 import utils.TimeManager;
 import utils.dataReader.JsonReader;
-
+@Epic("Automation Exercise")
+@Story("User Check out Test cases")
+@Severity(SeverityLevel.CRITICAL)
+@Owner("Mahmoud Saeid ITI")
 public class CheckOutTest extends BaseTest{
     String timestamp = TimeManager.getTimestampP();
-
-
-
-
-
-
 
 
 

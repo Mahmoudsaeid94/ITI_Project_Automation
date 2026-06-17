@@ -1,6 +1,7 @@
 package tests;
 
 import drivers.GUIDriver;
+import io.qameta.allure.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -9,8 +10,11 @@ import pages.components.NavigationBarComponent;
 import pages.productsPage;
 import utils.dataReader.JsonReader;
 
+@Epic("Automation Exercise")
+@Story("User Cart Test cases")
+@Severity(SeverityLevel.NORMAL)
+@Owner("Mahmoud Saeid ITI")
 public class CartTest extends BaseTest {
-
 
 @Test
 public void verifyProductOnCart() {

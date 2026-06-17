@@ -2,6 +2,7 @@
 package tests;
 
 import drivers.GUIDriver;
+import io.qameta.allure.*;
 import jdk.jfr.Description;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -12,7 +13,10 @@ import pages.productsPage;
 import utils.TimeManager;
 import utils.dataReader.JsonReader;
 
-
+@Epic("Automation Exercise")
+@Story("User Products Test cases")
+@Severity(SeverityLevel.NORMAL)
+@Owner("Mahmoud Saeid ITI")
 public class ProductsTest extends BaseTest {
     String timestamp = TimeManager.getTimestampP();
 

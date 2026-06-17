@@ -1,6 +1,7 @@
 package tests;
 
 import drivers.GUIDriver;
+import io.qameta.allure.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,7 +9,10 @@ import pages.*;
 import pages.components.NavigationBarComponent;
 import utils.TimeManager;
 import utils.dataReader.JsonReader;
-
+@Epic("Automation Exercise")
+@Story("User payment Test cases")
+@Severity(SeverityLevel.CRITICAL)
+@Owner("Mahmoud Saeid ITI")
 public class PaymentTest  extends BaseTest {
 
         String timestamp = TimeManager.getTimestampP();
