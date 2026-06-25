@@ -205,6 +205,3 @@ https://github.com/Mahmoudsaeid94
 
 LinkedIn:
 https://www.linkedin.com/in/mahmoud-saeid-qc
-
-
-
