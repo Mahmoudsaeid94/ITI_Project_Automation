@@ -4,6 +4,7 @@ import drivers.GUIDriver;
 import io.qameta.allure.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 import pages.components.NavigationBarComponent;
@@ -127,15 +128,18 @@ public void PaymentE2E() {
 
 
 }
-//    @Test(groups = {"Invalid"})
-//    public void PaymentInvalidCard() {
-//        new CheckOutPage(driver).clickOnPlaceOrder().fillCardInfo(
-//                        testData.getJsonData("card.nameOnCard1"),
-//                        testData.getJsonData("card.cardNumber1"),
-//                        testData.getJsonData("card.cvc1"),
-//                        testData.getJsonData("card.expiryMonth1"),
-//                        testData.getJsonData("card.expiryYear1")).ClickpayButton()
-//                ;}
+//@BeforeMethod(alwaysRun = true)
+//{
+//}
+    @Test(groups = {"Invalid"})
+    public void PaymentInvalidCard() {
+        new CheckOutPage(driver).clickOnPlaceOrder().fillCardInfo(
+                        testData.getJsonData("card.nameOnCard1"),
+                        testData.getJsonData("card.cardNumber1"),
+                        testData.getJsonData("card.cvc1"),
+                        testData.getJsonData("card.expiryMonth1"),
+                        testData.getJsonData("card.expiryYear1")).ClickpayButton()
+                ;}
 
 
 
