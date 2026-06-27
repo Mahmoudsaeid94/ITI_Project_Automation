@@ -205,8 +205,3 @@ https://github.com/Mahmoudsaeid94
 
 LinkedIn:
 https://www.linkedin.com/in/mahmoud-saeid-qc
-
-
-
-    │   └── All test Pipeline .yml (300 tokens)
-└── pom.xml (1700 tokens)
